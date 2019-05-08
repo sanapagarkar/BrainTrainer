@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_green_light"
+        android:onClick="start"
+        android:text="GO!"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/rellayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/playAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result"
+            android:layout_centerHorizontal="true"
+            android:onClick="playAgain"
+            android:text="Play Again" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gridLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:padding="10dp"
+            android:text="Correct" />
+
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:text="0/0" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:text="30s" />
+
+        <TextView
+            android:id="@+id/questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="0"
+                android:text="Button"
+                app:layout_column="0"
+                android:onClick="choose"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="1"
+                android:text="Button"
+                app:layout_column="1"
+                android:onClick="choose"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="2"
+                android:text="Button"
+                app:layout_column="0"
+                android:onClick="choose"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="choose"
+                android:tag="3"
+                android:text="Button"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+        </android.support.v7.widget.GridLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
